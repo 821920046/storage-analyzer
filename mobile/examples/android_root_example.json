@@ -22,6 +22,7 @@
     "disk_name": "/data",
     "filesystem": "ext4/f2fs",
     "purgeable": "",
+    "tier": "full",
     "disks": [
       {"name": "/data", "total": "128.0 GB", "used": "104.0 GB", "free": "24.0 GB"},
       {"name": "/sdcard", "total": "128.0 GB", "used": "104.0 GB", "free": "24.0 GB"}
@@ -30,18 +31,18 @@
       "/data/data",
       "/data/local/tmp",
       "/data/data/com.termux/files/home",
-      "/sdcard/Android/data",
-      "/sdcard/Download"
+      "/sdcard/Android/data"
     ]
   },
+  "approved_clear_packages": [],
   "groups": {
     "app_caches": [
-      {"name": "com.tencent.mm", "path": "/data/data/com.tencent.mm/cache", "size_kb": 4194304, "size_h": "4.0 GB", "package": "com.tencent.mm", "cache_path": "/data/data/com.tencent.mm/cache"},
-      {"name": "com.ss.android.ugc.aweme", "path": "/data/data/com.ss.android.ugc.aweme/cache", "size_kb": 3145728, "size_h": "3.0 GB", "package": "com.ss.android.ugc.aweme", "cache_path": "/data/data/com.ss.android.ugc.aweme/cache"},
-      {"name": "com.tencent.mobileqq", "path": "/data/data/com.tencent.mobileqq/cache", "size_kb": 2097152, "size_h": "2.0 GB", "package": "com.tencent.mobileqq", "cache_path": "/data/data/com.tencent.mobileqq/cache"}
+      {"name": "com.ss.android.ugc.aweme", "path": "/data/data/com.ss.android.ugc.aweme/cache", "size_kb": 614400, "size_h": "600.0 MB", "package": "com.ss.android.ugc.aweme", "cache_path": "/data/data/com.ss.android.ugc.aweme/cache"},
+      {"name": "com.tencent.mm", "path": "/data/data/com.tencent.mm/cache", "size_kb": 307200, "size_h": "300.0 MB", "package": "com.tencent.mm", "cache_path": "/data/data/com.tencent.mm/cache"},
+      {"name": "com.tencent.mobileqq", "path": "/data/data/com.tencent.mobileqq/cache", "size_kb": 153600, "size_h": "150.0 MB", "package": "com.tencent.mobileqq", "cache_path": "/data/data/com.tencent.mobileqq/cache"}
     ],
     "external_app_data": [
-      {"name": "com.netease.cloudmusic/cache", "path": "/sdcard/Android/data/com.netease.cloudmusic/cache", "size_kb": 1048576, "size_h": "1.0 GB", "package": "com.netease.cloudmusic", "cache_path": "/sdcard/Android/data/com.netease.cloudmusic/cache"}
+      {"name": "com.netease.cloudmusic/cache", "path": "/sdcard/Android/data/com.netease.cloudmusic/cache", "size_kb": 204800, "size_h": "200.0 MB", "package": "com.netease.cloudmusic", "cache_path": "/sdcard/Android/data/com.netease.cloudmusic/cache"}
     ],
     "downloads": [
       {"name": "setup_video_2026.apk", "path": "/sdcard/Download/setup_video_2026.apk", "size_kb": 153600, "size_h": "150.0 MB"}
@@ -50,8 +51,11 @@
       {"name": "DCIM/Camera", "path": "/sdcard/DCIM/Camera", "size_kb": 12582912, "size_h": "12.0 GB"}
     ],
     "runtime_caches": [
-      {"name": "cache", "path": "/data/data/com.termux/files/usr/cache", "size_kb": 204800, "size_h": "200.0 MB"}
+      {"name": "cache", "path": "/data/data/com.termux/files/usr/cache", "size_kb": 102400, "size_h": "100.0 MB"}
     ]
   },
-  "limitations": ["已获取 root：可枚举并清理各 App 的 cache 子目录。"]
+  "limitations": [
+    "已获取 root：可枚举并清理各 App 的 cache 子目录。",
+    "示例数据：以上 cache 体积为示意量级。真实设备上私有 cache 多为几十至几百 MB，且会在 App 再次运行时重建；微信/抖音的多 GB 数据通常在 MicroMsg 媒体文件或 databases，不属于可自动清理的 cache，切勿手删。"
+  ]
 }

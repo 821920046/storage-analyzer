@@ -16,8 +16,9 @@
 
 | 目录 | 装什么 | 典型分级 |
 |---|---|---|
-| `/data/data/<pkg>/cache` | 各 App 私有缓存（root 可读） | 🟢 仅 cache 子目录，删后 App 自动重建 |
-| `/data/data/<pkg>/databases`、`shared_prefs`、`files` | 聊天记录/登录态/配置 | 🔴 绝不手删 |
+| `/data/data/<pkg>/cache` | 各 App 私有缓存（root 可读） | 🟢 仅 cache 子目录，删后 App 自动重建；**多为几十~几百 MB，别夸大收益** |
+| `/data/data/<pkg>/databases`、`shared_prefs`、`files` | 聊天记录/登录态/配置 | 🔴 绝不手删；清理器对这几个目录名设了硬拒 |
+| `/data/data/com.tencent.mm/MicroMsg` | 微信图片/视频/语音媒体 | 🟡 真的大头在这，但属用户数据，只能引导 App 内清理，不能手删 |
 | `/sdcard/Android/data/<pkg>/cache` | App 外部缓存 | 🟢 |
 | `/sdcard/Android/data/<pkg>/files` | App 外部数据 | 🟡 需判断 |
 | `/sdcard/Download` 的 `.apk/.zip` | 安装包残留 | 🟢 装完可删 |

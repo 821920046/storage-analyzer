@@ -84,10 +84,18 @@ python3 scripts/cleanup_mobile.py mobile_analysis.json          # 预览
 python3 scripts/cleanup_mobile.py mobile_analysis.json --apply  # 用户确认后执行
 ```
 
-- Android root：只删绿灯 `trash_paths` 里的 cache 路径，且必须在 `safe_roots` 内。
-- ADB 系统级清理：`--trim-caches 2G`（可逆性低但为系统标准 API，安全）。
-- `pm clear <pkg>` **默认禁用**，只有用户显式 `--allow-clear <包名>` 才执行，因为它会清空用户数据。
+**清理器有三道硬闸门（对抗审查后加固，不要试图绕过）：**
+1. **tier 闸门**：只有 analysis 顶层 `capabilities.tier == "full"`（Android root）才允许删除；guide/limited 档即使列出 `trash_paths` 也会全部拒绝。
+2. **缓存语义闸门**：路径末段必须是已知缓存名（`cache`/`caches`/`code_cache` 等），且位于 `/data/data/<包名>/cache` 等 app-data 前缀下。任何一层含 `databases`/`files`/`MicroMsg`/`shared_prefs` 等用户数据目录名 → 硬拒，即使在 `green[].trash_paths` 里。
+3. **路径闸门**：realpath 解析后必须在 `safe_roots` 内；符号链接会被解析后再校验。
+
+其他要点：
+- analysis JSON 必须带 `capabilities.tier`（与扫描输出一致）和 `approved_clear_packages`（允许 `pm clear` 的包名白名单，通常为空数组）。
+- ADB 系统级清理：`--trim-caches 2G`（系统标准 API，安全，与 tier 无关但需 `--apply`）。
+- `pm clear <pkg>` **默认禁用**：包名必须同时出现在 analysis 的 `approved_clear_packages` 且符合合法包名格式，用 `--allow-clear <包名>` 传入才执行。它会清空用户数据。
 - iOS：直接打印手动引导步骤，不执行任何删除。
+
+**可释放量要如实标注**：私有 cache 多为几十~几百 MB 且会重建；微信/抖音的多 GB 数据在 `MicroMsg`/`databases`，不属于可自动清理范围，切勿诱导用户手删。
 
 执行前必须向用户展示计划并获得确认。**遇到任何安全策略拦截，引导用户手动操作，不要试图绕过。**
 

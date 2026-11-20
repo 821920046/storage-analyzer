@@ -52,9 +52,20 @@ python3 scripts/cleanup_mobile.py mobile_analysis.json --apply   # 确认后执�
 - **Android**：Termux（F-Droid / GitHub 版）+ `pkg install python android-tools`。root 可选，非本技能引导范围。
 - **iOS**：Pythonista / a-Shell 等沙盒 Python；能力固定为 `guide`。
 
-## 安全
+## 安全（对抗审查后加固）
 
 - 扫描脚本零写入；清理脚本默认 dry-run，`--apply` 才动手。
-- 所有删除路径必须在 `system.safe_roots` 内且属于绿灯纯缓存。
-- `pm clear` 默认禁用，需用户逐个显式授权。
+- **三道硬闸门**：① `capabilities.tier=="full"` 才允许删除；② 路径末段必须是已知缓存名且位于 app-data 前缀下，`databases`/`files`/`MicroMsg`/`shared_prefs` 等硬拒；③ realpath 必须在 `safe_roots` 内（解析符号链接后校验）。仅靠 agent 在 `green[].trash_paths` 里列路径**无法**绕过。
+- `pm clear` 默认禁用：包名须在 analysis 的 `approved_clear_packages` 中且格式合法。
+- analysis JSON 必须带 `capabilities.tier`；缺失或不匹配时拒绝一切删除。
 - 遇安全策略拦截时引导用户手动处理，不绕过。
+
+## 诚实的实用性评估
+
+| 档位 | 可用性 | 说明 |
+|---|---|---|
+| full（root） | 6/10 | 能逐 App 清 cache，但门槛高、单 App cache 多为几十~几百 MB 且会重建 |
+| limited（非 root/ADB） | 3/10 | 主要看公共存储，任何文件管理器都能做；机内 ADB 通常不可用 |
+| guide（iOS） | 2/10 | 沙盒限制只能分析自身近空目录 + 手动建议，本质是"诚实标注的引导" |
+
+可释放量一律是下限估算，尤其 non-full 档扫描只覆盖可见部分。
