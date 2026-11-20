@@ -1,0 +1,57 @@
+{
+  "generated_at": "2026-11-20 20:00:00",
+  "scan_seconds": 35.2,
+  "platform": "android",
+  "platform_detail": "Android 14",
+  "capabilities": {
+    "root": true,
+    "adb": true,
+    "adb_device": true,
+    "tier": "full",
+    "notes": ["已获取 root：可枚举并清理各 App 的 cache 子目录。"]
+  },
+  "system": {
+    "os": "Android 14",
+    "build": "UKQ1.230917.001",
+    "device": "Pixel 8",
+    "user": "shell",
+    "home": "/data/data/com.termux/files/home",
+    "disk_total": "128.0 GB",
+    "disk_used": "104.0 GB",
+    "disk_free": "24.0 GB",
+    "disk_name": "/data",
+    "filesystem": "ext4/f2fs",
+    "purgeable": "",
+    "disks": [
+      {"name": "/data", "total": "128.0 GB", "used": "104.0 GB", "free": "24.0 GB"},
+      {"name": "/sdcard", "total": "128.0 GB", "used": "104.0 GB", "free": "24.0 GB"}
+    ],
+    "safe_roots": [
+      "/data/data",
+      "/data/local/tmp",
+      "/data/data/com.termux/files/home",
+      "/sdcard/Android/data",
+      "/sdcard/Download"
+    ]
+  },
+  "groups": {
+    "app_caches": [
+      {"name": "com.tencent.mm", "path": "/data/data/com.tencent.mm/cache", "size_kb": 4194304, "size_h": "4.0 GB", "package": "com.tencent.mm", "cache_path": "/data/data/com.tencent.mm/cache"},
+      {"name": "com.ss.android.ugc.aweme", "path": "/data/data/com.ss.android.ugc.aweme/cache", "size_kb": 3145728, "size_h": "3.0 GB", "package": "com.ss.android.ugc.aweme", "cache_path": "/data/data/com.ss.android.ugc.aweme/cache"},
+      {"name": "com.tencent.mobileqq", "path": "/data/data/com.tencent.mobileqq/cache", "size_kb": 2097152, "size_h": "2.0 GB", "package": "com.tencent.mobileqq", "cache_path": "/data/data/com.tencent.mobileqq/cache"}
+    ],
+    "external_app_data": [
+      {"name": "com.netease.cloudmusic/cache", "path": "/sdcard/Android/data/com.netease.cloudmusic/cache", "size_kb": 1048576, "size_h": "1.0 GB", "package": "com.netease.cloudmusic", "cache_path": "/sdcard/Android/data/com.netease.cloudmusic/cache"}
+    ],
+    "downloads": [
+      {"name": "setup_video_2026.apk", "path": "/sdcard/Download/setup_video_2026.apk", "size_kb": 153600, "size_h": "150.0 MB"}
+    ],
+    "media": [
+      {"name": "DCIM/Camera", "path": "/sdcard/DCIM/Camera", "size_kb": 12582912, "size_h": "12.0 GB"}
+    ],
+    "runtime_caches": [
+      {"name": "cache", "path": "/data/data/com.termux/files/usr/cache", "size_kb": 204800, "size_h": "200.0 MB"}
+    ]
+  },
+  "limitations": ["已获取 root：可枚举并清理各 App 的 cache 子目录。"]
+}

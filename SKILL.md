@@ -18,6 +18,11 @@ description: >
 
 对 macOS / Windows 做一次只读存储分析，产出交互式 HTML 报告。流程：扫描 → 分析分级 → 生成网页 → 打开。
 
+## 平台路由（先判断）
+
+- **桌面（macOS / Windows）**：用本文件的流程 + 根目录 `scripts/`。
+- **手机（Android / iOS）**：改用 [mobile/SKILL.md](mobile/SKILL.md) 与 `mobile/scripts/`。移动分支会先探测权限档位（root / ADB / 沙盒）再决定能清理什么——iOS 沙盒与 Android 非 root **无法**清理其他 App 缓存，必须如实降级为引导，不虚报可释放量。用户说"手机空间不够/清理手机缓存/iPhone 存储空间"等即走移动分支。
+
 ## 铁律
 
 - **扫描与分析阶段全程只读。** 只能跑扫描/统计/列目录/读元信息（`du`、`diskutil`、`df`、Python 标准库）。绝对禁止 `rm`、`mv`、`rmdir`、清空回收站、改权限等任何写操作。

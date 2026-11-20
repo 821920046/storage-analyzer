@@ -30,6 +30,12 @@ git clone https://github.com/821920046/storage-analyzer.git ~/.workbuddy-ai/skil
 
 安装后，用自然语言触发即可，例如"帮我看看 C 盘为什么满了"。完整触发词见 `SKILL.md` 的 frontmatter `description`。
 
+## 📱 手机版（Android / iOS）
+
+`mobile/` 目录下是给**运行在手机上的 agent** 用的移动分支，支持 Android root/ADB 与 iOS 沙盒，按权限自动降级。触发场景："手机空间不够""清理手机缓存""iPhone 存储空间"等。详见 [mobile/README.md](mobile/README.md)。
+
+> 关键差异：iOS 沙盒下第三方无法清理其他 App 缓存，手机版会如实降级为引导方案，不虚报可释放量。
+
 ## 目录结构
 
 ```
@@ -45,6 +51,12 @@ storage-analyzer/
 │   └── windows.md                 # Windows 数据布局与分级参考
 ├── assets/
 │   └── report_template.html       # 报告模板（占位符 __REPORT_DATA__ / __DELETE_CONFIG__）
+├── mobile/                        # 📱 手机版（Android / iOS）
+│   ├── SKILL.md                   # 移动技能定义（含三档权限能力表）
+│   ├── README.md
+│   ├── scripts/{scan_mobile,cleanup_mobile}.py
+│   ├── references/{android,ios}.md
+│   └── examples/
 └── examples/
     ├── scan_example.json          # 脱敏的扫描输出示例
     ├── analysis_example.json      # 字段齐全的分析 JSON 示例（生成模板）

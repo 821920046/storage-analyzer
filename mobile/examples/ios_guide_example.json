@@ -1,0 +1,49 @@
+{
+  "generated_at": "2026-11-20 20:10:00",
+  "scan_seconds": 12.0,
+  "platform": "ios",
+  "platform_detail": "iOS (sandboxed Python)",
+  "capabilities": {
+    "root": false,
+    "adb": false,
+    "adb_device": false,
+    "tier": "guide",
+    "notes": [
+      "iOS 沙盒：第三方代码无法读取或删除其他 App 的容器，也不存在系统级缓存清理 API。",
+      "仅能分析自身沙盒 + Safari 缓存引导，其余需在「设置 → 通用 → iPhone 储存空间」或各 App 内手动清理。"
+    ]
+  },
+  "system": {
+    "os": "iOS",
+    "build": "",
+    "device": "",
+    "user": "mobile",
+    "home": "/private/var/mobile/Containers/Data/Application/XXXXXXXX/Documents",
+    "disk_total": "256.0 GB",
+    "disk_used": "210.0 GB",
+    "disk_free": "46.0 GB",
+    "disk_name": "App 沙盒",
+    "filesystem": "APFS",
+    "purgeable": "",
+    "disks": [
+      {"name": "App 沙盒", "total": "256.0 GB", "used": "210.0 GB", "free": "46.0 GB"}
+    ],
+    "safe_roots": [
+      "/private/var/mobile/Containers/Data/Application/XXXXXXXX/Documents",
+      "/private/var/mobile/Containers/Data/Application/XXXXXXXX/Library/Caches"
+    ]
+  },
+  "groups": {
+    "app_caches": [
+      {"name": "com.example.pythontool Caches", "path": "/private/var/mobile/Containers/Data/Application/XXXXXXXX/Library/Caches", "size_kb": 307200, "size_h": "300.0 MB"}
+    ],
+    "documents": [
+      {"name": "Downloads", "path": "/private/var/mobile/Containers/Data/Application/XXXXXXXX/Documents/Downloads", "size_kb": 153600, "size_h": "150.0 MB"}
+    ]
+  },
+  "limitations": [
+    "iOS 沙盒：第三方代码无法读取或删除其他 App 的容器，也不存在系统级缓存清理 API。",
+    "仅能分析自身沙盒 + Safari 缓存引导，其余需在「设置 → 通用 → iPhone 储存空间」或各 App 内手动清理。",
+    "iOS 无官方的跨 App 缓存清理接口；任何声称能清理其他 App 缓存的工具都依赖企业证书/越狱，存在安全与合规风险，不建议使用。"
+  ]
+}
