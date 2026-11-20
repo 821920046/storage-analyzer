@@ -1,0 +1,127 @@
+{
+  "generated_at": "2026-01-01 12:00:00",
+  "scan_seconds": 42.1,
+  "system": {
+    "os": "Windows 11",
+    "build": "10.0.26100",
+    "arch": "AMD64",
+    "user": "<USER>",
+    "home": "C:\\Users\\<USER>",
+    "filesystem": "NTFS",
+    "disk_total": "512.0 GB",
+    "disk_used": "300.0 GB",
+    "disk_free": "212.0 GB",
+    "purgeable": "",
+    "disk_name": "C:\\",
+    "disks": [
+      {"name": "C:\\", "total": "512.0 GB", "used": "300.0 GB", "free": "212.0 GB"},
+      {"name": "D:\\", "total": "1024.0 GB", "used": "180.0 GB", "free": "844.0 GB"}
+    ],
+    "safe_roots": [
+      "C:\\Users\\<USER>",
+      "C:\\Users\\<USER>\\AppData\\Local",
+      "C:\\Users\\<USER>\\AppData\\Local\\Temp",
+      "C:\\Users\\<USER>\\AppData\\Roaming",
+      "C:\\Users\\<USER>\\Downloads",
+      "C:\\Users\\<USER>\\Documents",
+      "C:\\Program Files",
+      "C:\\Program Files (x86)",
+      "C:\\",
+      "D:\\"
+    ]
+  },
+  "top5": [
+    {"rank": 1, "tier": "green", "size": "约 18.0 GB", "type": "开发缓存", "name": "Yarn + pip 缓存", "path": "C:\\Users\\<USER>\\AppData\\Local", "note": "Yarn 12 GB + pip 6 GB，均可再生"},
+    {"rank": 2, "tier": "yellow", "size": "约 15.0 GB", "type": "应用数据", "name": "浏览器 User Data", "path": "C:\\Users\\<USER>\\AppData\\Local\\Google\\Chrome\\User Data", "note": "含书签/密码，仅缓存子目录可清"},
+    {"rank": 3, "tier": "yellow", "size": "约 8.0 GB", "type": "办公协作", "name": "飞书 LarkShell", "path": "C:\\Users\\<USER>\\AppData\\Roaming\\LarkShell", "note": "加密数据库含离线消息"},
+    {"rank": 4, "tier": "green", "size": "约 4.0 GB", "type": "浏览器缓存", "name": "Chrome AI 模型缓存", "path": "C:\\Users\\<USER>\\AppData\\Local\\Google\\Chrome\\User Data\\OptGuideOnDeviceModel", "note": "删后自动重下"},
+    {"rank": 5, "tier": "red", "size": "约 4.7 GB", "type": "应用本体", "name": "Microsoft Office", "path": "C:\\Program Files\\Microsoft Office", "note": "走正规卸载，不手删"}
+  ],
+  "green": [
+    {
+      "name": "Yarn 全局缓存",
+      "path": "C:\\Users\\<USER>\\AppData\\Local\\Yarn",
+      "size_estimate": "约 12.0 GB",
+      "kill_processes": [],
+      "trash_paths": ["C:\\Users\\<USER>\\AppData\\Local\\Yarn"],
+      "commands": [{"label": "移入回收站", "cmd": "网页上点「移到废纸篓」，或手动删除该目录（下次 yarn install 自动重建）"}]
+    },
+    {
+      "name": "pip 缓存",
+      "path": "C:\\Users\\<USER>\\AppData\\Local\\pip\\Cache",
+      "size_estimate": "约 6.0 GB",
+      "kill_processes": [],
+      "trash_paths": ["C:\\Users\\<USER>\\AppData\\Local\\pip\\Cache"],
+      "commands": [{"label": "官方命令", "cmd": "pip cache purge"}]
+    },
+    {
+      "name": "系统临时文件",
+      "path": "C:\\Users\\<USER>\\AppData\\Local\\Temp",
+      "size_estimate": "约 800 MB",
+      "kill_processes": [],
+      "trash_paths": ["C:\\Users\\<USER>\\AppData\\Local\\Temp"],
+      "commands": [{"label": "说明", "cmd": "占用中的文件会跳过，属正常现象；浏览器等程序运行时建议先关闭"}]
+    }
+  ],
+  "yellow": [
+    {
+      "name": "Chrome 用户数据",
+      "path": "C:\\Users\\<USER>\\AppData\\Local\\Google\\Chrome\\User Data",
+      "size": "约 15.0 GB",
+      "content_profile": "Default 配置约 10 GB + OptGuideOnDeviceModel 4 GB + component_crx_cache 数百 MB",
+      "why_manual": "User Data 含书签、密码、登录态。仅删 AI 模型和组件缓存安全，删 Default 会丢登录",
+      "disposal": "Chrome 内：设置 → 隐私 → 清除浏览数据 → 高级 → 勾选缓存；或资源管理器仅删 OptGuideOnDeviceModel、component_crx_cache 等子目录",
+      "risk": "删 Default 或 Profile 目录会丢失所有密码/书签/登录态",
+      "trash_paths": [
+        "C:\\Users\\<USER>\\AppData\\Local\\Google\\Chrome\\User Data\\OptGuideOnDeviceModel",
+        "C:\\Users\\<USER>\\AppData\\Local\\Google\\Chrome\\User Data\\component_crx_cache"
+      ],
+      "open_note": "目录为 Chrome 内部格式，Default/ 与 Profile 1/ 含账号数据，不建议手动挑选删除。页面列出的缓存子目录可安全移入废纸篓。"
+    },
+    {
+      "name": "飞书 LarkShell 数据",
+      "path": "C:\\Users\\<USER>\\AppData\\Roaming\\LarkShell",
+      "size": "约 8.0 GB",
+      "content_profile": "sdk_storage + 加密数据库 WAL + 日志/ShaderCache",
+      "why_manual": "加密数据库含离线消息和文件，删除后功能异常",
+      "disposal": "飞书内：设置 → 通用 → 清理缓存；或资源管理器删 GrShaderCache 和日志目录",
+      "risk": "删加密数据库会导致离线消息丢失",
+      "trash_paths": [],
+      "open_note": "目录为飞书内部格式，建议在飞书 App 内使用自带清理功能。"
+    }
+  ],
+  "red": [
+    {
+      "name": "Microsoft Office",
+      "path": "C:\\Program Files\\Microsoft Office",
+      "size": "约 4.7 GB",
+      "why_keep": "Office 桌面版安装目录，手动删除会残留注册表和服务项",
+      "indirect_release": "设置 → 应用 → 搜索 Microsoft 365 → 卸载；需要重装时去官网下载",
+      "app_paths": ["C:\\Program Files\\Microsoft Office"]
+    },
+    {
+      "name": "NVIDIA 驱动",
+      "path": "C:\\Program Files\\NVIDIA Corporation",
+      "size": "约 637 MB",
+      "why_keep": "显卡驱动核心文件，手动删除会导致显示异常",
+      "indirect_release": "用 NVIDIA 官方安装程序选「自定义 → 执行清洁安装」；彻底清残留可在安全模式用 DDU",
+      "app_paths": ["C:\\Program Files\\NVIDIA Corporation"]
+    }
+  ],
+  "denied": [],
+  "summary": {
+    "overview": "系统盘最大的可清理项是开发缓存（Yarn+pip 合计约 18 GB），浏览器与飞书数据需在应用内或资源管理器审查。",
+    "tier_stats": {"green": "约 18.8 GB", "yellow": "约 23.0 GB", "red": "约 5.3 GB"},
+    "priority": [
+      "先清绿灯：Yarn/pip/临时文件约 18.8 GB，均为可再生缓存，零风险",
+      "Chrome AI 缓存：OptGuide 约 4 GB，清完浏览器会自动重下",
+      "飞书：约 8 GB，在飞书内用自带清理，或仅删缓存子目录"
+    ],
+    "long_term": [
+      "Windows：设置 → 系统 → 存储 → 开启存储感知，自动清理临时文件",
+      "cleanmgr 磁盘清理 → 清理系统文件 → 勾选 Windows 更新清理",
+      "DISM /Online /Cleanup-Image /StartComponentCleanup（不要手删 WinSxS）",
+      "浏览器定期清除浏览数据中的缓存项"
+    ]
+  }
+}

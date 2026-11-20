@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# 扫描与分析产物（含本机路径，不入库）
+*_scan.json
+*_analysis.json
+storage_scan.*
+storage_analysis.json
+
+# 本地工具配置
+.claude/
+.vscode/
+.idea/
+*.local.json
+
+# 生成的报告
+*.html
+!assets/report_template.html
+
+# 系统
+.DS_Store
+Thumbs.db

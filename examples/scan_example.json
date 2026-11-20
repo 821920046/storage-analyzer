@@ -1,0 +1,986 @@
+{
+  "generated_at": "2026-06-12 22:47:28",
+  "system": {
+    "os": "Windows 11",
+    "build": "10.0.26100",
+    "arch": "AMD64",
+    "user": "<USER>",
+    "home": "C:\\Users\\<USER>",
+    "disk_total": "149.2 GB",
+    "disk_used": "110.1 GB",
+    "disk_free": "39.1 GB",
+    "filesystem": "NTFS",
+    "purgeable": "",
+    "disk_name": "C:\\",
+    "disks": [
+      {
+        "name": "C:\\",
+        "total": "149.2 GB",
+        "used": "110.1 GB",
+        "free": "39.1 GB"
+      },
+      {
+        "name": "D:\\",
+        "total": "200.0 GB",
+        "used": "31.7 GB",
+        "free": "168.3 GB"
+      },
+      {
+        "name": "E:\\",
+        "total": "126.1 GB",
+        "used": "2.7 GB",
+        "free": "123.4 GB"
+      }
+    ]
+  },
+  "groups": {
+    "downloads": [
+      {
+        "name": "openclaw-home.tgz",
+        "path": "C:\\Users\\<USER>\\Downloads\\openclaw-home.tgz",
+        "size_kb": 164824,
+        "size_h": "161.0 MB"
+      },
+      {
+        "name": "com.termux_1022.apk",
+        "path": "C:\\Users\\<USER>\\Downloads\\com.termux_1022.apk",
+        "size_kb": 112227,
+        "size_h": "109.6 MB"
+      },
+      {
+        "name": "giffgaff.zip",
+        "path": "C:\\Users\\<USER>\\Downloads\\giffgaff.zip",
+        "size_kb": 56432,
+        "size_h": "55.1 MB"
+      },
+      {
+        "name": "(Others/Small Files)",
+        "path": "C:\\Users\\<USER>\\Downloads",
+        "size_kb": 284798,
+        "size_h": "278.1 MB",
+        "is_other": true
+      }
+    ],
+    "apps": [
+      {
+        "name": "Adobe Photoshop 2024",
+        "uninstall_cmd": "\"C:\\Program Files (x86)\\Common Files\\Adobe\\Adobe Desktop Common\\HDBox\\Uninstaller.exe\" --uninstall=1 --sapCode=PHSP --productVersion=25.9.1 --productPlatform=win64 --productAdobeCode={PHSP-25.9.1-64-ADBEADBEADBEADBEADBEA} --productName=\"Photoshop\" --mode=1",
+        "size_kb": 4905564,
+        "size_h": "4.7 GB"
+      },
+      {
+        "name": "Microsoft Edge",
+        "uninstall_cmd": "\"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\149.0.4022.62\\Installer\\setup.exe\" --uninstall --msedge --channel=stable --system-level --verbose-logging",
+        "size_kb": 2046137,
+        "size_h": "2.0 GB"
+      },
+      {
+        "name": "Microsoft Edge WebView2 Runtime",
+        "uninstall_cmd": "\"C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\149.0.4022.62\\Installer\\setup.exe\" --uninstall --msedgewebview --system-level --verbose-logging",
+        "size_kb": 2046137,
+        "size_h": "2.0 GB"
+      },
+      {
+        "name": "飞书",
+        "uninstall_cmd": "\"E:\\Feishu\\uninstall.exe\"",
+        "size_kb": 1618465,
+        "size_h": "1.5 GB"
+      },
+      {
+        "name": "Antigravity (User)",
+        "uninstall_cmd": "\"D:\\Google antigravity\\Antigravity\\unins000.exe\" /SILENT",
+        "size_kb": 1017873,
+        "size_h": "994.0 MB"
+      },
+      {
+        "name": "QQ",
+        "uninstall_cmd": "D:\\QQ\\Uninstall.exe",
+        "size_kb": 987923,
+        "size_h": "964.8 MB"
+      },
+      {
+        "name": "Trae (User)",
+        "uninstall_cmd": "\"D:\\Tare (AI编程）\\Trae\\unins000.exe\" /SILENT",
+        "size_kb": 959354,
+        "size_h": "936.9 MB"
+      },
+      {
+        "name": "千帆客服工作台 1.2.6",
+        "uninstall_cmd": "\"D:\\小红书\\eva\\Uninstall 千帆客服工作台.exe\" /currentuser /S",
+        "size_kb": 916788,
+        "size_h": "895.3 MB"
+      },
+      {
+        "name": "Windows Subsystem for Linux",
+        "uninstall_cmd": "MsiExec.exe /X{B637A6A6-5591-4503-AFD8-776164EB837A}",
+        "size_kb": 862512,
+        "size_h": "842.3 MB"
+      },
+      {
+        "name": "微信",
+        "uninstall_cmd": "\"D:\\微信\\WeChat\\Uninstall.exe\"",
+        "size_kb": 822744,
+        "size_h": "803.5 MB"
+      },
+      {
+        "name": "Cherry Studio",
+        "uninstall_cmd": "\"D:\\Cherry Studio\\Uninstall Cherry Studio.exe\" /currentuser /S",
+        "size_kb": 577659,
+        "size_h": "564.1 MB"
+      },
+      {
+        "name": "Antigravity 2.1.4",
+        "uninstall_cmd": "\"C:\\Users\\<USER>\\AppData\\Local\\Programs\\antigravity\\Uninstall Antigravity.exe\" /currentuser /S",
+        "size_kb": 509535,
+        "size_h": "497.6 MB"
+      },
+      {
+        "name": "Warp",
+        "uninstall_cmd": "\"D:\\warp终端\\Warp\\unins000.exe\" /SILENT",
+        "size_kb": 375725,
+        "size_h": "366.9 MB"
+      },
+      {
+        "name": "英特尔® PROSet/无线软件",
+        "uninstall_cmd": "\"C:\\ProgramData\\Package Cache\\{b6baad94-26c6-492b-af11-240ee2f02fe4}\\ISetup.exe\" /uninstall /quiet",
+        "size_kb": 360657,
+        "size_h": "352.2 MB"
+      },
+      {
+        "name": "Git",
+        "uninstall_cmd": "\"C:\\Program Files\\Git\\unins000.exe\" /SILENT",
+        "size_kb": 354563,
+        "size_h": "346.3 MB"
+      },
+      {
+        "name": "UXP WebView Support",
+        "uninstall_cmd": "\"C:\\Program Files (x86)\\Common Files\\Adobe\\Adobe Desktop Common\\HDBox\\Uninstaller.exe\" --uninstall=1 --sapCode=UXPW --productVersion=1.1.0 --productPlatform=win64 --productAdobeCode={UXPW-1.1.0-64-ADBEADBEADBEADBEADBEAD} --productName=\"UXP WebView Support\" --mode=1",
+        "size_kb": 334349,
+        "size_h": "326.5 MB"
+      },
+      {
+        "name": "Microsoft Windows Desktop Runtime - 8.0.8 (x64)",
+        "uninstall_cmd": "\"C:\\ProgramData\\Package Cache\\{33832ff3-5583-4b81-b270-d9fd42760e1a}\\windowsdesktop-runtime-8.0.8-win-x64.exe\" /uninstall /quiet",
+        "size_kb": 222367,
+        "size_h": "217.2 MB"
+      },
+      {
+        "name": "Telegram Desktop",
+        "uninstall_cmd": "\"D:\\Telegram Desktop\\Telegram Desktop\\unins000.exe\" /SILENT",
+        "size_kb": 204391,
+        "size_h": "199.6 MB"
+      },
+      {
+        "name": "GitHub Desktop",
+        "uninstall_cmd": "\"C:\\Users\\<USER>\\AppData\\Local\\GitHubDesktop\\Update.exe\" --uninstall -s",
+        "size_kb": 190358,
+        "size_h": "185.9 MB"
+      },
+      {
+        "name": "Python 3.14.2 (64-bit)",
+        "uninstall_cmd": "\"C:\\Users\\<USER>\\AppData\\Local\\Package Cache\\{0ef3959c-4dd0-4cd2-9d49-307eaf0a2bff}\\python-3.14.2-amd64.exe\" /uninstall /quiet",
+        "size_kb": 172450,
+        "size_h": "168.4 MB"
+      },
+      {
+        "name": "Intel® PROSet/Wireless WiFi Software",
+        "uninstall_cmd": "MsiExec.exe /I{68A981A0-ED59-41E0-B45E-7A78F643120D}",
+        "size_kb": 115872,
+        "size_h": "113.2 MB"
+      },
+      {
+        "name": "Node.js",
+        "uninstall_cmd": "MsiExec.exe /I{F4937DE9-DA3D-4B72-9930-F3028D671956}",
+        "size_kb": 105209,
+        "size_h": "102.7 MB"
+      },
+      {
+        "name": "Intel(R) Management Engine Components",
+        "uninstall_cmd": "MsiExec.exe /I{10DCEFAD-6530-40FD-8D59-0A1E07B4D2ED}",
+        "size_kb": 100428,
+        "size_h": "98.1 MB"
+      },
+      {
+        "name": "Intel(R) Processor Graphics",
+        "uninstall_cmd": "\"C:\\Program Files (x86)\\Intel\\Intel(R) Processor Graphics\\Uninstall\\igxpin.exe\" -uninstall",
+        "size_kb": 76000,
+        "size_h": "74.2 MB"
+      },
+      {
+        "name": "Microsoft .NET Runtime - 8.0.8 (x64)",
+        "uninstall_cmd": "MsiExec.exe /X{9ACB23DB-4D32-49ED-A5E3-F4E2F8D9D2AA}",
+        "size_kb": 72048,
+        "size_h": "70.4 MB"
+      },
+      {
+        "name": "Python 3.14.2 Documentation (64-bit)",
+        "uninstall_cmd": "MsiExec.exe /I{123A1B2C-D913-4500-BF5B-37D6A9BEB108}",
+        "size_kb": 64120,
+        "size_h": "62.6 MB"
+      },
+      {
+        "name": "英特尔(R) 无线 Bluetooth(R)",
+        "uninstall_cmd": "MsiExec.exe /I{00000030-0210-2052-84C8-B8D95FA3C8C3}",
+        "size_kb": 55284,
+        "size_h": "54.0 MB"
+      },
+      {
+        "name": "LocalSend 版本 1.17.0",
+        "uninstall_cmd": "\"D:\\LocalSend\\LocalSend\\unins000.exe\" /SILENT",
+        "size_kb": 47460,
+        "size_h": "46.3 MB"
+      },
+      {
+        "name": "Intel(R) Trusted Connect Services Client",
+        "uninstall_cmd": "\"C:\\ProgramData\\Package Cache\\{05817e4d-5f15-49b4-afec-7edb31fc7dd6}\\iclsClientInstaller.exe\" /uninstall /quiet",
+        "size_kb": 42566,
+        "size_h": "41.6 MB"
+      },
+      {
+        "name": "Realtek High Definition Audio Driver",
+        "uninstall_cmd": "\"C:\\Program Files (x86)\\InstallShield Installation Information\\{F132AF7F-7BCA-4EDE-8A7C-958108FE7DBC}\\Setup.exe\" -runfromtemp  -removeonly",
+        "size_kb": 39687,
+        "size_h": "38.8 MB"
+      },
+      {
+        "name": "GitHub CLI",
+        "uninstall_cmd": "MsiExec.exe /X{C4C5EF69-20FB-49FB-B9CE-715D4ED7966D}",
+        "size_kb": 39601,
+        "size_h": "38.7 MB"
+      },
+      {
+        "name": "Python 3.14.2 Test Suite (64-bit)",
+        "uninstall_cmd": "MsiExec.exe /I{F2FCB28C-F751-4F4C-A9B4-E1A70DDDADCD}",
+        "size_kb": 35376,
+        "size_h": "34.5 MB"
+      },
+      {
+        "name": "Office 16 Click-to-Run Extensibility Component",
+        "uninstall_cmd": "MsiExec.exe /X{90160000-008C-0000-1000-0000000FF1CE}",
+        "size_kb": 35176,
+        "size_h": "34.4 MB"
+      },
+      {
+        "name": "Python 3.14.2 Standard Library (64-bit)",
+        "uninstall_cmd": "MsiExec.exe /I{FDF326B0-ECA5-42EC-9125-7F5ACD5995B8}",
+        "size_kb": 24400,
+        "size_h": "23.8 MB"
+      },
+      {
+        "name": "Microsoft VC++ redistributables repacked.",
+        "uninstall_cmd": "MsiExec.exe /I{807E2B0B-7E5C-4C7D-8E55-CC8F157C15B6}",
+        "size_kb": 22796,
+        "size_h": "22.3 MB"
+      },
+      {
+        "name": "Microsoft Visual C++ 2015-2022 Redistributable (x64) - 14.44.35211",
+        "uninstall_cmd": "\"C:\\ProgramData\\Package Cache\\{d8bbe9f9-7c5b-42c6-b715-9ee898a2e515}\\VC_redist.x64.exe\" /uninstall /quiet",
+        "size_kb": 21235,
+        "size_h": "20.7 MB"
+      },
+      {
+        "name": "Microsoft Visual C++ 2013 Redistributable (x64) - 12.0.40664",
+        "uninstall_cmd": "\"C:\\ProgramData\\Package Cache\\{042d26ef-3dbe-4c25-95d3-4c1b11b235a7}\\vcredist_x64.exe\" /uninstall /quiet",
+        "size_kb": 21062,
+        "size_h": "20.6 MB"
+      },
+      {
+        "name": "Microsoft Visual C++ 2015-2022 Redistributable (x86) - 14.44.35211",
+        "uninstall_cmd": "\"C:\\ProgramData\\Package Cache\\{0b5169e3-39da-4313-808e-1f9c0407f3bf}\\VC_redist.x86.exe\" /uninstall /quiet",
+        "size_kb": 18673,
+        "size_h": "18.2 MB"
+      },
+      {
+        "name": "Microsoft Visual C++ 2013 Redistributable (x86) - 12.0.40664",
+        "uninstall_cmd": "\"C:\\ProgramData\\Package Cache\\{9dff3540-fc85-4ed5-ac84-9e3c7fd8bece}\\vcredist_x86.exe\" /uninstall /quiet",
+        "size_kb": 17602,
+        "size_h": "17.2 MB"
+      },
+      {
+        "name": "Microsoft Visual C++ 2010  x64 Redistributable - 10.0.40219",
+        "uninstall_cmd": "MsiExec.exe /X{1D8E6291-B0D5-35EC-8441-6616F567A0F7}",
+        "size_kb": 17329,
+        "size_h": "16.9 MB"
+      },
+      {
+        "name": "Intel(R) Trusted Connect Service Client x86",
+        "uninstall_cmd": "MsiExec.exe /I{C9552825-7BF2-4344-BA91-D3CD46F4C441}",
+        "size_kb": 17148,
+        "size_h": "16.7 MB"
+      },
+      {
+        "name": "Python 3.14.2 Tcl/Tk Support (64-bit)",
+        "uninstall_cmd": "MsiExec.exe /I{24994863-C156-4E42-8FF6-F17D4773092E}",
+        "size_kb": 14032,
+        "size_h": "13.7 MB"
+      },
+      {
+        "name": "Microsoft Visual C++ 2022 X64 Additional Runtime - 14.44.35211",
+        "uninstall_cmd": "MsiExec.exe /I{86AB2CC9-08BD-4643-B0F9-F82D006D72FF}",
+        "size_kb": 11892,
+        "size_h": "11.6 MB"
+      },
+      {
+        "name": "Microsoft Visual C++ 2013 x64 Additional Runtime - 12.0.40664",
+        "uninstall_cmd": "MsiExec.exe /X{010792BA-551A-3AC0-A7EF-0FAB4156C382}",
+        "size_kb": 11784,
+        "size_h": "11.5 MB"
+      },
+      {
+        "name": "Microsoft Visual C++ 2010  x86 Redistributable - 10.0.40219",
+        "uninstall_cmd": "MsiExec.exe /X{F0C3E5D1-1ADE-321E-8167-68EF0DE699A5}",
+        "size_kb": 11417,
+        "size_h": "11.1 MB"
+      },
+      {
+        "name": "Microsoft Visual C++ 2022 X86 Additional Runtime - 14.44.35211",
+        "uninstall_cmd": "MsiExec.exe /I{C18FB403-1E88-43C8-AD8A-CED50F23DE8B}",
+        "size_kb": 10352,
+        "size_h": "10.1 MB"
+      },
+      {
+        "name": "Microsoft Visual C++ 2013 x86 Additional Runtime - 12.0.40664",
+        "uninstall_cmd": "MsiExec.exe /X{D401961D-3A20-3AC7-943B-6139D5BD490A}",
+        "size_kb": 9456,
+        "size_h": "9.2 MB"
+      },
+      {
+        "name": "Intel(R) Trusted Connect Service Client x64",
+        "uninstall_cmd": "MsiExec.exe /I{C9552825-7BF2-4344-BA91-D3CD46F4C442}",
+        "size_kb": 9160,
+        "size_h": "8.9 MB"
+      },
+      {
+        "name": "Python 3.14.2 Core Interpreter (64-bit)",
+        "uninstall_cmd": "MsiExec.exe /I{EF39D56D-D2F1-4D1E-87EF-6D3FC9EF4D5D}",
+        "size_kb": 6664,
+        "size_h": "6.5 MB"
+      },
+      {
+        "name": "7-Zip 24.08 (x64)",
+        "uninstall_cmd": "\"D:\\7Zip\\7-Zip\\Uninstall.exe\" /S",
+        "size_kb": 5698,
+        "size_h": "5.6 MB"
+      },
+      {
+        "name": "Realtek Ethernet Controller Driver",
+        "uninstall_cmd": "\"C:\\Program Files (x86)\\InstallShield Installation Information\\{8833FFB6-5B0C-4764-81AA-06DFEED9A476}\\setup.exe\" -runfromtemp -removeonly",
+        "size_kb": 5218,
+        "size_h": "5.1 MB"
+      },
+      {
+        "name": "Python 3.14.2 Development Libraries (64-bit)",
+        "uninstall_cmd": "MsiExec.exe /I{78EB2837-5DCC-42E9-913A-91D0775038C6}",
+        "size_kb": 3084,
+        "size_h": "3.0 MB"
+      },
+      {
+        "name": "Python 3.14.2 Executables (64-bit)",
+        "uninstall_cmd": "MsiExec.exe /I{4827DB7C-EA57-4B8F-B5E8-80F2B368003D}",
+        "size_kb": 2800,
+        "size_h": "2.7 MB"
+      },
+      {
+        "name": "英特尔® 芯片组设备软件",
+        "uninstall_cmd": "\"C:\\ProgramData\\Package Cache\\{4551f75f-3c54-4f09-8221-8c8a061bad00}\\SetupChipset.exe\" /uninstall /quiet",
+        "size_kb": 2682,
+        "size_h": "2.6 MB"
+      },
+      {
+        "name": "Microsoft Visual C++ 2013 x64 Minimum Runtime - 12.0.40664",
+        "uninstall_cmd": "MsiExec.exe /X{53CF6934-A98D-3D84-9146-FC4EDF3D5641}",
+        "size_kb": 2524,
+        "size_h": "2.5 MB"
+      },
+      {
+        "name": "Microsoft Visual C++ 2022 X64 Minimum Runtime - 14.44.35211",
+        "uninstall_cmd": "MsiExec.exe /I{43B0D101-A022-48F4-9D04-BA404CEB1D53}",
+        "size_kb": 2404,
+        "size_h": "2.3 MB"
+      },
+      {
+        "name": "Microsoft Visual C++ 2013 x86 Minimum Runtime - 12.0.40664",
+        "uninstall_cmd": "MsiExec.exe /X{8122DAB1-ED4D-3676-BB0A-CA368196543E}",
+        "size_kb": 2076,
+        "size_h": "2.0 MB"
+      },
+      {
+        "name": "Microsoft Visual C++ 2022 X86 Minimum Runtime - 14.44.35211",
+        "uninstall_cmd": "MsiExec.exe /I{922480B5-CAEB-4B1B-AAA4-9716EFDCE26B}",
+        "size_kb": 2024,
+        "size_h": "2.0 MB"
+      },
+      {
+        "name": "Python Launcher",
+        "uninstall_cmd": "MsiExec.exe /X{9B55B41C-B3DB-4778-B9ED-443EFF0D721A}",
+        "size_kb": 1560,
+        "size_h": "1.5 MB"
+      },
+      {
+        "name": "Office 16 Click-to-Run Localization Component",
+        "uninstall_cmd": "MsiExec.exe /X{90160000-008C-0804-1000-0000000FF1CE}",
+        "size_kb": 1500,
+        "size_h": "1.5 MB"
+      },
+      {
+        "name": "Intel(R) Serial IO",
+        "uninstall_cmd": "MsiExec.exe /I{7EB7E1A5-7771-481E-A2AC-8734A9BC3B4F}",
+        "size_kb": 1045,
+        "size_h": "1.0 MB"
+      },
+      {
+        "name": "Microsoft .NET Host - 8.0.8 (x64)",
+        "uninstall_cmd": "MsiExec.exe /X{3BA242F8-BDB5-4096-9FBC-333CD663BBAD}",
+        "size_kb": 484,
+        "size_h": "484 KB"
+      },
+      {
+        "name": "Microsoft .NET Host FX Resolver - 8.0.8 (x64)",
+        "uninstall_cmd": "MsiExec.exe /X{7FE24458-0796-4428-99C2-9A0F8DAB93CC}",
+        "size_kb": 324,
+        "size_h": "324 KB"
+      },
+      {
+        "name": "Python 3.14.2 pip Bootstrap (64-bit)",
+        "uninstall_cmd": "MsiExec.exe /I{B629CC25-B4E0-4A9E-99C9-216A14F4144A}",
+        "size_kb": 288,
+        "size_h": "288 KB"
+      },
+      {
+        "name": "Intel(R) Chipset Device Software",
+        "uninstall_cmd": "MsiExec.exe /X{351A0D24-F6F1-4105-AA50-5D2CCC71E0DD}",
+        "size_kb": 76,
+        "size_h": "76 KB"
+      },
+      {
+        "name": "Python 3.14.2 Add to Path (64-bit)",
+        "uninstall_cmd": "MsiExec.exe /I{4B91344F-511C-4064-90AC-D3A106A6A19F}",
+        "size_kb": 52,
+        "size_h": "52 KB"
+      },
+      {
+        "name": "Intel(R) Management Engine Driver",
+        "uninstall_cmd": "MsiExec.exe /I{3AE6B9D9-A2C7-4843-8151-69889B72CDA3}",
+        "size_kb": 21,
+        "size_h": "21 KB"
+      },
+      {
+        "name": "百度输入法",
+        "uninstall_cmd": "\"D:\\百度输入法\\6.1.12.0\\Uninst.exe\"",
+        "size_kb": 0,
+        "size_h": "?"
+      },
+      {
+        "name": "Google Chrome",
+        "uninstall_cmd": "\"C:\\Program Files\\Google\\Chrome\\Application\\148.0.7778.217\\Installer\\setup.exe\" --uninstall --channel=stable --system-level --verbose-logging",
+        "size_kb": 0,
+        "size_h": "?"
+      },
+      {
+        "name": "SPEC",
+        "uninstall_cmd": "RunDll32 C:\\PROGRA~2\\COMMON~1\\INSTAL~1\\PROFES~1\\RunTime\\11\\50\\Intel32\\Ctor.dll,LaunchSetup \"C:\\Program Files (x86)\\InstallShield Installation Information\\{01558DB8-4080-42BF-87BD-EAD0988616BB}\\setup.exe\" -l0x804  -removeonly",
+        "size_kb": 0,
+        "size_h": "?"
+      },
+      {
+        "name": "Genesys USB Mass Storage Device",
+        "uninstall_cmd": "\"C:\\Program Files (x86)\\InstallShield Installation Information\\{959B7F35-2819-40C5-A0CD-3C53B5FCC935}\\setup.exe\" -runfromtemp -l0x0804  -removeonly",
+        "size_kb": 0,
+        "size_h": "?"
+      },
+      {
+        "name": "微软OfficePLUS",
+        "uninstall_cmd": "\"C:\\Program Files\\Microsoft OfficePLUS\\3.16.0.55628\\uninst.exe\"",
+        "size_kb": 0,
+        "size_h": "?"
+      },
+      {
+        "name": "Microsoft 365 - zh-cn",
+        "uninstall_cmd": "\"C:\\Program Files\\Common Files\\Microsoft Shared\\ClickToRun\\OfficeClickToRun.exe\" scenario=install scenariosubtype=ARP sourcetype=None productstoremove=O365HomePremRetail.16_zh-cn_x-none culture=zh-cn version.16=16.0",
+        "size_kb": 0,
+        "size_h": "?"
+      },
+      {
+        "name": "NVIDIA 图形驱动程序 442.23",
+        "uninstall_cmd": "\"C:\\Windows\\SysWOW64\\RunDll32.EXE\" \"C:\\Program Files\\NVIDIA Corporation\\Installer2\\InstallerCore\\NVI2.DLL\",UninstallPackage Display.Driver",
+        "size_kb": 0,
+        "size_h": "?"
+      },
+      {
+        "name": "NVIDIA GeForce Experience 3.20.2.34",
+        "uninstall_cmd": "\"C:\\Windows\\SysWOW64\\RunDll32.EXE\" \"C:\\Program Files\\NVIDIA Corporation\\Installer2\\InstallerCore\\NVI2.DLL\",UninstallPackage Display.GFExperience",
+        "size_kb": 0,
+        "size_h": "?"
+      },
+      {
+        "name": "NVIDIA PhysX 系统软件 9.19.0218",
+        "uninstall_cmd": "\"C:\\Windows\\SysWOW64\\RunDll32.EXE\" \"C:\\Program Files\\NVIDIA Corporation\\Installer2\\InstallerCore\\NVI2.DLL\",UninstallPackage Display.PhysX",
+        "size_kb": 0,
+        "size_h": "?"
+      },
+      {
+        "name": "千牛工作台",
+        "uninstall_cmd": "D:\\千牛\\Uninstall.exe",
+        "size_kb": 0,
+        "size_h": "?"
+      },
+      {
+        "name": "Personal White Board",
+        "uninstall_cmd": "\"C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe\" --profile-directory=Default --uninstall-app-id=lkannhjpnnbojhhljgbgjoaeiljpdpad",
+        "size_kb": 0,
+        "size_h": "?"
+      },
+      {
+        "name": "MatrixNav - 智能个人导航",
+        "uninstall_cmd": "\"C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe\" --profile-directory=Default --uninstall-app-id=jbenpanbnlnmnpdcpbggmnopphbfdpok",
+        "size_kb": 0,
+        "size_h": "?"
+      },
+      {
+        "name": "Claude Code",
+        "uninstall_cmd": "winget uninstall --product-code Anthropic.ClaudeCode_Microsoft.Winget.Source_8wekyb3d8bbwe",
+        "size_kb": 0,
+        "size_h": "?"
+      },
+      {
+        "name": "Codex++",
+        "uninstall_cmd": "D:\\CodexPlusPlus\\Codex++\\uninstall.exe",
+        "size_kb": 0,
+        "size_h": "?"
+      }
+    ],
+    "program_files_x86": [
+      {
+        "name": "Microsoft",
+        "path": "C:\\Program Files (x86)\\Microsoft",
+        "size_kb": 3333070,
+        "size_h": "3.2 GB"
+      },
+      {
+        "name": "Google",
+        "path": "C:\\Program Files (x86)\\Google",
+        "size_kb": 507808,
+        "size_h": "495.9 MB"
+      },
+      {
+        "name": "AlibabaProtect",
+        "path": "C:\\Program Files (x86)\\AlibabaProtect",
+        "size_kb": 466319,
+        "size_h": "455.4 MB"
+      },
+      {
+        "name": "NVIDIA Corporation",
+        "path": "C:\\Program Files (x86)\\NVIDIA Corporation",
+        "size_kb": 285575,
+        "size_h": "278.9 MB"
+      },
+      {
+        "name": "Common Files",
+        "path": "C:\\Program Files (x86)\\Common Files",
+        "size_kb": 239208,
+        "size_h": "233.6 MB"
+      },
+      {
+        "name": "Intel",
+        "path": "C:\\Program Files (x86)\\Intel",
+        "size_kb": 163184,
+        "size_h": "159.4 MB"
+      },
+      {
+        "name": "(Others/Small Files)",
+        "path": "C:\\Program Files (x86)",
+        "size_kb": 149142,
+        "size_h": "145.6 MB",
+        "is_other": true
+      }
+    ],
+    "temp": [
+      {
+        "name": "(Others/Small Files)",
+        "path": "C:\\Users\\<USER>\\AppData\\Local\\Temp",
+        "size_kb": 143691,
+        "size_h": "140.3 MB",
+        "is_other": true
+      }
+    ],
+    "program_files": [
+      {
+        "name": "Microsoft Office",
+        "path": "C:\\Program Files\\Microsoft Office",
+        "size_kb": 4932282,
+        "size_h": "4.7 GB"
+      },
+      {
+        "name": "Common Files",
+        "path": "C:\\Program Files\\Common Files",
+        "size_kb": 2406165,
+        "size_h": "2.3 GB"
+      },
+      {
+        "name": "Google",
+        "path": "C:\\Program Files\\Google",
+        "size_kb": 948859,
+        "size_h": "926.6 MB"
+      },
+      {
+        "name": "WSL",
+        "path": "C:\\Program Files\\WSL",
+        "size_kb": 861631,
+        "size_h": "841.4 MB"
+      },
+      {
+        "name": "NVIDIA Corporation",
+        "path": "C:\\Program Files\\NVIDIA Corporation",
+        "size_kb": 653127,
+        "size_h": "637.8 MB"
+      },
+      {
+        "name": "Git",
+        "path": "C:\\Program Files\\Git",
+        "size_kb": 420223,
+        "size_h": "410.4 MB"
+      },
+      {
+        "name": "Intel",
+        "path": "C:\\Program Files\\Intel",
+        "size_kb": 280259,
+        "size_h": "273.7 MB"
+      },
+      {
+        "name": "dotnet",
+        "path": "C:\\Program Files\\dotnet",
+        "size_kb": 164111,
+        "size_h": "160.3 MB"
+      },
+      {
+        "name": "(Others/Small Files)",
+        "path": "C:\\Program Files",
+        "size_kb": 312153,
+        "size_h": "304.8 MB",
+        "is_other": true
+      }
+    ],
+    "dev_garbage": [
+      {
+        "name": "node_modules",
+        "path": "C:\\Users\\<USER>\\Desktop\\github\\Personal-White-Board\\node_modules",
+        "size_kb": 313102,
+        "size_h": "305.8 MB"
+      },
+      {
+        "name": "node_modules",
+        "path": "C:\\Users\\<USER>\\Desktop\\github\\ai-news-radar-enhanced\\node_modules",
+        "size_kb": 11089,
+        "size_h": "10.8 MB"
+      }
+    ],
+    "installers": [
+      {
+        "name": "com.termux_1022.apk",
+        "path": "C:\\Users\\<USER>\\Downloads\\com.termux_1022.apk",
+        "size_kb": 112227,
+        "size_h": "109.6 MB"
+      },
+      {
+        "name": "workerd.exe",
+        "path": "C:\\Users\\<USER>\\Desktop\\github\\Personal-White-Board\\node_modules\\@cloudflare\\workerd-windows-64\\bin\\workerd.exe",
+        "size_kb": 87262,
+        "size_h": "85.2 MB"
+      }
+    ],
+    "appdata_local": [
+      {
+        "name": "Google",
+        "path": "C:\\Users\\<USER>\\AppData\\Local\\Google",
+        "size_kb": 8485724,
+        "size_h": "8.1 GB"
+      },
+      {
+        "name": "Yarn",
+        "path": "C:\\Users\\<USER>\\AppData\\Local\\Yarn",
+        "size_kb": 3382124,
+        "size_h": "3.2 GB"
+      },
+      {
+        "name": "Microsoft",
+        "path": "C:\\Users\\<USER>\\AppData\\Local\\Microsoft",
+        "size_kb": 2035179,
+        "size_h": "1.9 GB"
+      },
+      {
+        "name": "CapCut",
+        "path": "C:\\Users\\<USER>\\AppData\\Local\\CapCut",
+        "size_kb": 1163361,
+        "size_h": "1.1 GB"
+      },
+      {
+        "name": "GitHubDesktop",
+        "path": "C:\\Users\\<USER>\\AppData\\Local\\GitHubDesktop",
+        "size_kb": 1136304,
+        "size_h": "1.1 GB"
+      },
+      {
+        "name": "Packages",
+        "path": "C:\\Users\\<USER>\\AppData\\Local\\Packages",
+        "size_kb": 1121402,
+        "size_h": "1.1 GB"
+      },
+      {
+        "name": "wsl",
+        "path": "C:\\Users\\<USER>\\AppData\\Local\\wsl",
+        "size_kb": 949285,
+        "size_h": "927.0 MB"
+      },
+      {
+        "name": "Programs",
+        "path": "C:\\Users\\<USER>\\AppData\\Local\\Programs",
+        "size_kb": 697104,
+        "size_h": "680.8 MB"
+      },
+      {
+        "name": "eva-updater",
+        "path": "C:\\Users\\<USER>\\AppData\\Local\\eva-updater",
+        "size_kb": 494322,
+        "size_h": "482.7 MB"
+      },
+      {
+        "name": "Steam",
+        "path": "C:\\Users\\<USER>\\AppData\\Local\\Steam",
+        "size_kb": 391688,
+        "size_h": "382.5 MB"
+      },
+      {
+        "name": "npm-cache",
+        "path": "C:\\Users\\<USER>\\AppData\\Local\\npm-cache",
+        "size_kb": 386962,
+        "size_h": "377.9 MB"
+      },
+      {
+        "name": "OpenAI",
+        "path": "C:\\Users\\<USER>\\AppData\\Local\\OpenAI",
+        "size_kb": 373681,
+        "size_h": "364.9 MB"
+      },
+      {
+        "name": "adspower_global-updater",
+        "path": "C:\\Users\\<USER>\\AppData\\Local\\adspower_global-updater",
+        "size_kb": 307825,
+        "size_h": "300.6 MB"
+      },
+      {
+        "name": "cherrystudio-updater",
+        "path": "C:\\Users\\<USER>\\AppData\\Local\\cherrystudio-updater",
+        "size_kb": 263904,
+        "size_h": "257.7 MB"
+      },
+      {
+        "name": "antigravity-updater",
+        "path": "C:\\Users\\<USER>\\AppData\\Local\\antigravity-updater",
+        "size_kb": 262727,
+        "size_h": "256.6 MB"
+      },
+      {
+        "name": "OfficePLUS",
+        "path": "C:\\Users\\<USER>\\AppData\\Local\\OfficePLUS",
+        "size_kb": 220146,
+        "size_h": "215.0 MB"
+      },
+      {
+        "name": "ms-playwright-go",
+        "path": "C:\\Users\\<USER>\\AppData\\Local\\ms-playwright-go",
+        "size_kb": 190768,
+        "size_h": "186.3 MB"
+      },
+      {
+        "name": "electron",
+        "path": "C:\\Users\\<USER>\\AppData\\Local\\electron",
+        "size_kb": 134639,
+        "size_h": "131.5 MB"
+      },
+      {
+        "name": "Temp",
+        "path": "C:\\Users\\<USER>\\AppData\\Local\\Temp",
+        "size_kb": 129461,
+        "size_h": "126.4 MB"
+      },
+      {
+        "name": "cursor-updater",
+        "path": "C:\\Users\\<USER>\\AppData\\Local\\cursor-updater",
+        "size_kb": 128360,
+        "size_h": "125.4 MB"
+      },
+      {
+        "name": "com.ccswitch.desktop",
+        "path": "C:\\Users\\<USER>\\AppData\\Local\\com.ccswitch.desktop",
+        "size_kb": 61727,
+        "size_h": "60.3 MB"
+      },
+      {
+        "name": "deskreen-updater",
+        "path": "C:\\Users\\<USER>\\AppData\\Local\\deskreen-updater",
+        "size_kb": 59597,
+        "size_h": "58.2 MB"
+      },
+      {
+        "name": "node-gyp",
+        "path": "C:\\Users\\<USER>\\AppData\\Local\\node-gyp",
+        "size_kb": 52497,
+        "size_h": "51.3 MB"
+      },
+      {
+        "name": "(Others/Small Files)",
+        "path": "C:\\Users\\<USER>\\AppData\\Local",
+        "size_kb": 293672,
+        "size_h": "286.8 MB",
+        "is_other": true
+      }
+    ],
+    "dev_caches": [
+      {
+        "name": "Yarn",
+        "path": "C:\\Users\\<USER>\\AppData\\Local\\Yarn",
+        "size_kb": 3382124,
+        "size_h": "3.2 GB"
+      },
+      {
+        "name": ".cache",
+        "path": "C:\\Users\\<USER>\\.cache",
+        "size_kb": 1154446,
+        "size_h": "1.1 GB"
+      }
+    ],
+    "appdata_roaming": [
+      {
+        "name": "LarkShell",
+        "path": "C:\\Users\\<USER>\\AppData\\Roaming\\LarkShell",
+        "size_kb": 8923158,
+        "size_h": "8.5 GB"
+      },
+      {
+        "name": "Tencent",
+        "path": "C:\\Users\\<USER>\\AppData\\Roaming\\Tencent",
+        "size_kb": 4146036,
+        "size_h": "4.0 GB"
+      },
+      {
+        "name": "Trae",
+        "path": "C:\\Users\\<USER>\\AppData\\Roaming\\Trae",
+        "size_kb": 1452257,
+        "size_h": "1.4 GB"
+      },
+      {
+        "name": "aliworkbench",
+        "path": "C:\\Users\\<USER>\\AppData\\Roaming\\aliworkbench",
+        "size_kb": 814473,
+        "size_h": "795.4 MB"
+      },
+      {
+        "name": "Antigravity",
+        "path": "C:\\Users\\<USER>\\AppData\\Roaming\\Antigravity",
+        "size_kb": 601887,
+        "size_h": "587.8 MB"
+      },
+      {
+        "name": "Adobe",
+        "path": "C:\\Users\\<USER>\\AppData\\Roaming\\Adobe",
+        "size_kb": 466869,
+        "size_h": "455.9 MB"
+      },
+      {
+        "name": "WorkBuddy",
+        "path": "C:\\Users\\<USER>\\AppData\\Roaming\\WorkBuddy",
+        "size_kb": 422618,
+        "size_h": "412.7 MB"
+      },
+      {
+        "name": "QQ",
+        "path": "C:\\Users\\<USER>\\AppData\\Roaming\\QQ",
+        "size_kb": 365963,
+        "size_h": "357.4 MB"
+      },
+      {
+        "name": "com.adobe.dunamis",
+        "path": "C:\\Users\\<USER>\\AppData\\Roaming\\com.adobe.dunamis",
+        "size_kb": 338004,
+        "size_h": "330.1 MB"
+      },
+      {
+        "name": "eva",
+        "path": "C:\\Users\\<USER>\\AppData\\Roaming\\eva",
+        "size_kb": 193792,
+        "size_h": "189.2 MB"
+      },
+      {
+        "name": "(Others/Small Files)",
+        "path": "C:\\Users\\<USER>\\AppData\\Roaming",
+        "size_kb": 105356,
+        "size_h": "102.9 MB",
+        "is_other": true
+      }
+    ],
+    "user_profile": [
+      {
+        "name": "AppData",
+        "path": "C:\\Users\\<USER>\\AppData",
+        "size_kb": 40761001,
+        "size_h": "38.9 GB"
+      },
+      {
+        "name": ".gemini",
+        "path": "C:\\Users\\<USER>\\.gemini",
+        "size_kb": 4971939,
+        "size_h": "4.7 GB"
+      },
+      {
+        "name": "Desktop",
+        "path": "C:\\Users\\<USER>\\Desktop",
+        "size_kb": 3560450,
+        "size_h": "3.4 GB"
+      },
+      {
+        "name": ".claude",
+        "path": "C:\\Users\\<USER>\\.claude",
+        "size_kb": 1403869,
+        "size_h": "1.3 GB"
+      },
+      {
+        "name": ".cache",
+        "path": "C:\\Users\\<USER>\\.cache",
+        "size_kb": 1154446,
+        "size_h": "1.1 GB"
+      },
+      {
+        "name": "Documents",
+        "path": "C:\\Users\\<USER>\\Documents",
+        "size_kb": 1144113,
+        "size_h": "1.1 GB"
+      },
+      {
+        "name": "Downloads",
+        "path": "C:\\Users\\<USER>\\Downloads",
+        "size_kb": 618320,
+        "size_h": "603.8 MB"
+      },
+      {
+        "name": ".codex",
+        "path": "C:\\Users\\<USER>\\.codex",
+        "size_kb": 397622,
+        "size_h": "388.3 MB"
+      },
+      {
+        "name": ".local",
+        "path": "C:\\Users\\<USER>\\.local",
+        "size_kb": 287968,
+        "size_h": "281.2 MB"
+      },
+      {
+        "name": "(Others/Small Files)",
+        "path": "C:\\Users\\<USER>",
+        "size_kb": 172044,
+        "size_h": "168.0 MB",
+        "is_other": true
+      }
+    ]
+  },
+  "scan_seconds": 15.4
+}
