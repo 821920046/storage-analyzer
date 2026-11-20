@@ -46,6 +46,29 @@
 
 **关键**：前 3 项才是"提升手机存储空间"的主战场，且都**不需要 root**。技能的真正价值应放在"精确定位 + 精确引导到第 2/3 项"，第 5 项只是能力展示。
 
+## 二·补：非 root 也能拿到按 App 占用明细（ADB 诊断，重要能力）
+
+这是本技能相对"普通文件管理器"的**真正增量**——用 Android 系统自己的统计服务，无需 root、无需读取任何 App 私有目录。
+
+**可行路径（AOSP 源码确认）**：`adb shell dumpsys diskstats` 读取系统缓存 `/data/system/diskstats_cache.json`，输出四组 JSON 数组（`Package Names:` / `App Sizes:` / `App Data Sizes:` / `Cache Sizes:`，单位 KB）。dump 受 `checkDumpAndUsageStatsPermission()` 保护，但 adb 的 shell UID 持有 DUMP 权限，因此**已授权 ADB 调试的非 root 设备即可用**。
+
+- 工具：`scripts/adb_diag.py`（跑在电脑上，需 adb 已连接手机）。输出按总占用排序的 App 列表，含 app/data/cache 各自体积与占比。
+- 典型洞察：能算出"微信 8GB、其中缓存仅 200MB（2.4%）"——直接证明清缓存无用、应引导清数据或卸载。
+- 局限：数据源是系统**周期刷新**的缓存文件，可能滞后数小时，是估算值；最终以手机「设置→存储」为准。
+- `dumpsys usagestats` 可尝试取最后使用时间（格式因版本而异，best-effort）支撑"不用的大 App"建议。
+
+**纠正一个常见误解**：`StorageStatsManager.queryStatsForPackage()` 虽能查别包统计，但需要 `PACKAGE_USAGE_STATS`——官方明确说它是 "a system-level permission that will not be granted to normal apps"。**跑在手机上的 Termux/普通 App 拿不到**，别指望用它做设备内诊断；要走 ADB shell 这条路。
+
+引导用户到某个 App 的设置页（无需 root）：
+```
+adb shell am start -a android.settings.APPLICATION_DETAILS_SETTINGS -d package:<包名>
+```
+`ACTION_CLEAR_APP_CACHE` / `getManageSpaceActivityIntent()` 需要 MANAGE_EXTERNAL_STORAGE + QUERY_ALL_PACKAGES 等条件，受限更多，作为了解，不依赖。
+
+权威来源：
+- AOSP `frameworks/base/services/core/java/com/android/server/DiskStatsService.java`（dump 输出格式）
+- https://developer.android.com/reference/android/app/usage/StorageStatsManager （PACKAGE_USAGE_STATS 权限说明）
+
 ## 三、App 私有目录语义与可清理性（root 档参考）
 
 | 子目录 | 装什么 | 判断 |

@@ -19,7 +19,8 @@ mobile/
 ├── SKILL.md                     # 移动技能定义（agent 读；含三档能力表与执行流程）
 ├── README.md                    # 本文件
 ├── scripts/
-│   ├── scan_mobile.py           # 只读扫描 + 平台/权限探测
+│   ├── scan_mobile.py           # 只读扫描 + 平台/权限探测（设备内运行）
+│   ├── adb_diag.py              # ADB 按 App 精确占用诊断（电脑端，无需 root，核心增量）
 │   └── cleanup_mobile.py        # 受保护清理执行器（默认 dry-run）
 ├── references/
 │   ├── android.md               # Android 权限档位 / 目录 / 命令 / 风险
@@ -36,6 +37,9 @@ mobile/
 ```bash
 # 1) 扫描（只读）
 python3 scripts/scan_mobile.py > mobile_scan.json
+
+# 1b) Android 推荐追加：ADB 按 App 精确诊断（电脑端、无需 root，需手机已授权 ADB 调试）
+python3 scripts/adb_diag.py > adb_diag.json   # 拿到"微信 8GB / 缓存仅 2%"这类关键数据
 
 # 2) Agent 读 mobile_scan.json + references/<平台>.md，产出 mobile_analysis.json
 

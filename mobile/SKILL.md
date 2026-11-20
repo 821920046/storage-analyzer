@@ -66,6 +66,12 @@ python3 scripts/scan_mobile.py > mobile_scan.json
 - `groups`：按权限可见的目录组（`app_caches`、`external_app_data`、`downloads`、`media`、`runtime_caches` 等）
 - `limitations`：**必须原样写进报告**的能力限制说明
 
+**Android 强烈建议追加 ADB 精确诊断（无需 root，这是技能的核心增量）**：如果 agent 跑在电脑上且手机已授权 ADB 调试，运行
+```bash
+python3 scripts/adb_diag.py > adb_diag.json          # 按 App 列出 app/data/cache 体积与占比
+```
+它用系统 `dumpsys diskstats` 拿到**按包名占用明细**——设备内脚本做不到这点（`StorageStatsManager` 需要普通 App 拿不到的系统权限）。把 `adb_diag.json` 的 Top App 并入分析：哪个 App 最大、其中缓存占比多少。典型结论："微信 8GB 但缓存只占 2.4%"→ 引导清数据/卸载，而不是清缓存。数据是系统周期刷新的估算值，报告里注明可能滞后、以手机设置为准。
+
 ### Step 2 分析与分级
 
 先按平台读参考：Android 读 [references/android.md](references/android.md)，iOS 读 [references/ios.md](references/ios.md)。然后读 `mobile_scan.json`：
