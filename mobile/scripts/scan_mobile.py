@@ -162,7 +162,8 @@ def detect_capabilities(platform):
     caps["adb"] = bool(adb)
     if adb:
         devices = run([adb, "devices"], timeout=15)
-        caps["adb_device"] = bool(re.search(r"^\S+\s+device$", devices, re.M))
+        # 放行尾随空格/CR，并容忍 "device product:xxx model:yyy" 这类带信息的行
+        caps["adb_device"] = bool(re.search(r"^\S+\s+device\b", devices, re.M))
 
     if platform == "android":
         if caps["root"]:
