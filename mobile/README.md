@@ -60,12 +60,26 @@ python3 scripts/cleanup_mobile.py mobile_analysis.json --apply   # 确认后执�
 - analysis JSON 必须带 `capabilities.tier`；缺失或不匹配时拒绝一切删除。
 - 遇安全策略拦截时引导用户手动处理，不绕过。
 
+## 核心认知：清 cache 不是解决方案（依据 Android 官方文档）
+
+深度调研后修正了方向——**"逐个删 App 的 cache"是低 ROI 手段**：
+
+- 官方文档明确：cache 目录 "designed to store a small amount of sensitive data"，且低存储时系统**会自动删除**缓存；手动清了也会重建。
+- 官方文档明确：即便授予 `MANAGE_EXTERNAL_STORAGE`，"still can't access the app-specific directories that belong to other apps"——非 root 第三方工具进不了别家 `Android/data`。
+- 官方正道是引导：`ACTION_MANAGE_STORAGE`、`ACTION_CLEAR_APP_CACHE`、`getManageSpaceActivityIntent()`（Android 12+，跳到微信等 App 自带的存储管理页）。
+
+**真正能释放空间的手段（按 ROI，均无需 root）**：① 卸载不用的大 App（数 GB）→ ② 各 App 自带存储清理（数百 MB~数 GB）→ ③ 删 Download/媒体里的安装包与旧文件 → ④ 系统清所有 App 缓存（收益短暂）→ ⑤ root 逐 App 删 cache（仅几十~几百 MB，会重建，本技能 cleanup 只做这档）。详见 [references/android.md](references/android.md)。
+
 ## 诚实的实用性评估
 
-| 档位 | 可用性 | 说明 |
+以上认知也修正了评分——技能的定位从"代理清理"转向"精确定位 + 精确引导"：
+
+| 档位 | 实用性 | 说明 |
 |---|---|---|
-| full（root） | 6/10 | 能逐 App 清 cache，但门槛高、单 App cache 多为几十~几百 MB 且会重建 |
-| limited（非 root/ADB） | 3/10 | 主要看公共存储，任何文件管理器都能做；机内 ADB 通常不可用 |
+| full（root） | 6/10 | 能逐 App 清 cache（低 ROI）；真正大头仍需引导 App 内清理 |
+| limited（非 root/ADB） | 4/10 | 机内 ADB 多不可用；价值在扫描公共存储 + **精确引导到 App 清理入口**（这部分无需 root、收益最大） |
 | guide（iOS） | 2/10 | 沙盒限制只能分析自身近空目录 + 手动建议，本质是"诚实标注的引导" |
+
+**给用户的实话**：想真正腾出空间，靠的不是脚本删缓存，而是按引导卸载/清理大 App 和媒体文件——这是系统限制决定的，不是工具缺陷。
 
 可释放量一律是下限估算，尤其 non-full 档扫描只覆盖可见部分。

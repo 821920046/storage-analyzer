@@ -15,6 +15,23 @@ description: >
 
 给**手机上运行的 agent** 用的存储分析技能：扫描 → 探测权限 → 能力分档 → 分析分级 → 报告 → （可选）受保护清理。
 
+## 核心认知（基于 Android 官方文档，先读这条再行动）
+
+**清 cache 不是释放手机空间的有效手段。三条官方事实：**
+
+1. Android 官方说 cache 目录 "designed to store a small amount of sensitive data"，且 "When the device is low on internal storage space, Android may delete these cache files to recover space" —— **cache 天生小额、系统会自动清、清了马上重建**。
+2. 连 `MANAGE_EXTERNAL_STORAGE`（所有文件访问）"still can't access the app-specific directories that belong to other apps" —— **非 root 第三方工具根本进不了别家 App 的 Android/data**，这是系统硬限制。
+3. 官方正道是引导用户/App 自己清：`ACTION_MANAGE_STORAGE`、`ACTION_CLEAR_APP_CACHE`、Android 12+ `getManageSpaceActivityIntent()`（跳到微信等 App 自带的存储管理页）。
+
+**因此技能的真正价值排序（按 ROI，别搞反）：**
+1. 诊断谁占空间 → 引导**卸载**长期不用的大 App（数 GB，无需 root）
+2. 引导用**各 App 自带的存储清理**（微信存储空间管理、抖音清缓存、相册"最近删除"，数百 MB~数 GB，无需 root）
+3. 定位并确认删除 Download/DCIM 里的安装包/旧视频/重复照片（无需 root）
+4. `ACTION_CLEAR_APP_CACHE` 清所有 App 缓存（收益短暂，官方警告耗电）
+5. root 下逐 App 删 `cache`（仅几十~几百 MB、会重建）——**这只是能力展示，不是解决方案**
+
+给用户的摘要和建议必须按这个顺序，把力气花在前 3 项。详见 [references/android.md](references/android.md)（含官方原文引用与链接）。
+
 ## 铁律（比桌面版更严格）
 
 - **扫描全程只读**：`scan_mobile.py` 只统计体积/列目录，绝不写删。
@@ -56,10 +73,11 @@ python3 scripts/scan_mobile.py > mobile_scan.json
 1. **先定档**：读 `capabilities.tier`。这一步决定整个报告的诚实度。
 2. **挑 Top 5** 占用大户，判定类型。
 3. **三级分类**（和桌面版一致的三灯语义）：
-   - 🟢 **可自动清理**：只有在 `tier=full` 且是 App `cache` 子目录、或系统/开发缓存时才给；每项必须带 `trash_paths`（精确可删路径，且必须在 `safe_roots` 内）。iOS 下 🟢 只允许放 Safari/自身沙盒缓存引导，不给删除路径。
-   - 🟡 **需人工判断**：Download 里的安装包/视频、媒体、聊天数据等，给内容画像 + 处置路径 + 风险，附带「打开文件管理器」引导。
-   - 🔴 **谨慎清理**：应用本体（微信/大型游戏等），只引导「设置里卸载/卸载重装」，绝不手删。
+   - 🟢 **可自动清理**：只有在 `tier=full` 且是 App `cache` 子目录、或系统/开发缓存时才给；每项必须带 `trash_paths`（精确可删路径，且必须在 `safe_roots` 内）。**必须标注"小额、会重建、系统也会自动清"，不要把它包装成主要释放手段。** iOS 下 🟢 只允许放 Safari/自身沙盒缓存引导，不给删除路径。
+   - 🟡 **需人工判断（重点档）**：媒体文件、聊天数据、Download 安装包/视频——**这才是真正的大头**。每项给内容画像 + 处置路径 + 风险，并且给出**精确到"App→菜单→具体项"的引导**（如"微信→我→设置→通用→存储空间→清理缓存"，见 references/android.md 第五节），而不是空泛的"去设置里清理"。
+   - 🔴 **谨慎清理**：应用本体（微信/大型游戏等），引导「设置→应用→卸载」——这是**释放空间最大的一招**，要明确告诉用户。
 4. **无决策价值的项**（系统、正在用的普通 App）不进三灯，归蓝色"系统及其他"。
+5. **建议优先级**：`summary.priority` 必须按 ROI 排序——先卸载不用大 App → 各 App 自带清理 → 删 Download/媒体 → 最后才是清 cache。不要把清 cache 列在第一位。
 
 **大小字段写干净**：用"约 8 GB"即可，不要重复"（估算）"。**iOS / limited 档务必在 `summary.overview` 里点明"扫描仅覆盖可见部分"**。
 
